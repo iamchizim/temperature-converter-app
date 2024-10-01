@@ -1,13 +1,126 @@
+/* Base styles */
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e0f7fa;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Container for the Temperature Converter */
+section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
+
+/* Section hover effect */
+section:hover {
+  transform: translateY(-10px);
+}
+
+/* Heading */
+h2 {
+  color: #00796b;
+  font-size: 26px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Input field styling */
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  border: 1px solid #00796b;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #f1f8e9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus effect for the input */
+input[type="number"]:focus {
+  border-color: #004d40;
+  background-color: #e8f5e9;
+  outline: none;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #004d40;
+  font-weight: 500;
+}
+
+/* Select dropdown styling */
+select {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  border: 1px solid #00796b;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f1f8e9;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus effect for the select */
+select:focus {
+  border-color: #004d40;
+  background-color: #e8f5e9;
+  outline: none;
+}
+
+/* Result display */
+div {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #00796b;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f1f8e9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Result hover effect */
+div:hover {
+  background-color: #e0f2f1;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+  section {
+    padding: 20px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input[type="number"], select {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  div {
+    font-size: 20px;
+  }
+}
+
